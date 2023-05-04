@@ -13,45 +13,36 @@ public class ReproductorApp {
 		this.nombre = "Suena Feliz";
 		this.CANT_MAX_USUARIOS = 100;
 		this.usuarios = new Usuario[this.CANT_MAX_USUARIOS];
-		this.baseDeDatosDeCanciones = new HashSet<>();
+		this.baseDeDatosDeCanciones =  new HashSet<>();
 		this.inicializarLaBaseDeDatosDeCanciones();
 	}
 	
-	
 	private void inicializarLaBaseDeDatosDeCanciones() {
-		this.baseDeDatosDeCanciones = Set.of(
-				new Cancion("JVKE, Ruel", "Golden hour", "02:29"),
-				new Cancion("Frédéric Chopin", "Nocturne op. 9 no. 2", "04:04"),
-				new Cancion("Artic Monkeys", "Brianstorm", "02:52"),
-				new Cancion("Artic Monkeys", "Teddy Picker", "02:45"),
-				new Cancion("Justin Timberlake", "Love never felt so good", "04:16"),
-				new Cancion("Mariya Takeuchi", "Plastic love", "04:54"),
-				new Cancion("Britney Spears", "Baby one more time","03:32"),
-				new Cancion("Blondie", "One way or another","03:36"),
-				new Cancion("Black Sabbath", "Paranoid","02:48"),
-				new Cancion("Wisin y Yandel", "Algo me gusta de ti", "04:34"),
-				new Cancion("Deorro y Chris Brown", "Five more hours","03:30"),
-				new Cancion("Wisin, Anuel AA, Los Legendarios", "Fiel - Remix", "05:50"),
-				new Cancion("Aitana", "Los Angeles", "05:05"),
-				new Cancion("Dua Lipa", "Pretty please", "03:14"),
-				new Cancion("Ken-Y, Zion, Arcangel", "Diosa de los corazones","04:04"),
-				new Cancion("Men I trust", "Lauren","03:30"),
-				new Cancion("Foster the people", "Imagination","04:16"),
-				new Cancion("Borns", "Electric Love", "03:40"),
-				new Cancion("Roger Sanchez", "Another Chance", "07:02"),
-				new Cancion("The Beatles", "Help!", "02:20"),
-				new Cancion("The Beatles", "Hey Jude", "03:50"),
-				new Cancion("Daniel del Toro", "Zamba para olvidar", "03:19"),
-				new Cancion("Cannons", "Fire for you", "03:50"),
-				new Cancion("Joahnn Sebastian Bach", "Prelude in C Mayor", "02:28"),
-				new Cancion("Rodrigo", "Lo mejor del amor", "03:48"),
-				new Cancion("Banda XXI", "Qué bonito", "03:58"),
-				new Cancion("David Bowie", "Modern Love", "04:28"),
-				new Cancion("Silver", "Wham Bang Shang A Lang", "03:38"),
-				new Cancion("Oasis", "Don't look back in anger", "03:38"),
-				new Cancion("The Weekend", "Secrets", "04:25"),
-				new Cancion("Los Angeles Azules, Natalia Lafourcade", "Nunca es suficiente", "04:26"));
-			
+		this.baseDeDatosDeCanciones.add(new Cancion("JVKE, Ruel", "Golden hour", "02:29")); 
+		this.baseDeDatosDeCanciones.add(new Cancion("JVKE, Ruel", "Golden hour", "02:29"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Frédéric Chopin", "Nocturne op. 9 no. 2", "04:04"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Artic Monkeys", "Brianstorm", "02:52"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Artic Monkeys", "Teddy Picker", "02:45"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Justin Timberlake", "Love never felt so good", "04:16"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Mariya Takeuchi", "Plastic love", "04:54"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Britney Spears", "Baby one more time","03:32"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Blondie", "One way or another","03:36"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Black Sabbath", "Paranoid","02:48"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Wisin y Yandel", "Algo me gusta de ti", "04:34"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Dua Lipa", "Pretty please", "03:14"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Men I trust", "Lauren","03:30"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Foster the people", "Imagination","04:16"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Borns", "Electric Love", "03:40"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Roger Sanchez", "Another Chance", "07:02"));
+		this.baseDeDatosDeCanciones.add(new Cancion("The Beatles", "Help!", "02:20"));
+		this.baseDeDatosDeCanciones.add(new Cancion("The Beatles", "Hey Jude", "03:50"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Cannons", "Fire for you", "03:50"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Joahnn Sebastian Bach", "Prelude in C Mayor", "02:28"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Rodrigo", "Lo mejor del amor", "03:48"));
+		this.baseDeDatosDeCanciones.add(new Cancion("David Bowie", "Modern Love", "04:28"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Silver", "Wham Bang Shang A Lang", "03:38"));
+		this.baseDeDatosDeCanciones.add(new Cancion("Oasis", "Don't look back in anger", "03:38"));
+		this.baseDeDatosDeCanciones.add(new Cancion("The Weekend", "Secrets", "04:25"));	
 	}
 
 	public boolean registrarUnNuevoUsuario(Usuario user) {
@@ -116,6 +107,11 @@ public class ReproductorApp {
 		}
 		
 		return null;
+	}
+
+
+	public void agregarCancion(Cancion cancion) {
+		this.baseDeDatosDeCanciones.add(cancion);	
 	}
 	
 	

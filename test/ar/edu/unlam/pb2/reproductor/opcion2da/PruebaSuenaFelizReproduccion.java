@@ -91,15 +91,15 @@ public class PruebaSuenaFelizReproduccion {
 	public void queSePuedaInicializarLaBaseDeDatosDelReproductor() {
 		// Preparacion de datos
 		final String NOMBRE_ESPERADO = "Suena Feliz";
-		final Integer CANTIDAD_DE_CANCIONES_EN_LA_BD = 31;
+		final Integer CANTIDAD_DE_CANCIONES_EN_LA_BD_ESPERADA= 24;
 		ReproductorApp reproductor;
-
+		
 		// Ejecucion
 		reproductor = new ReproductorApp();
 
 		// Validacion
 		assertEquals(NOMBRE_ESPERADO, reproductor.getNombre());
-		assertEquals(CANTIDAD_DE_CANCIONES_EN_LA_BD, reproductor.obtenerCantidadDeCancionesDeLaBD());
+		assertEquals(CANTIDAD_DE_CANCIONES_EN_LA_BD_ESPERADA, reproductor.obtenerCantidadDeCancionesDeLaBD());
 
 	}
 
@@ -685,14 +685,14 @@ public class PruebaSuenaFelizReproduccion {
 		//el usuario reproduce una playlist
 		String informarcionDeLaListaSeleccionada = user.reproducirPlaylist(ID_LISTA_SELECCIONADA_EXISTENTE);
 		
-		/*final String INFORMACION_ESPERADA = "\nCantidad total: 5"+
+		final String INFORMACION_ESPERADA = "\nCantidad total: 5"+
 				"\nDuracion: 14:58" +
 				user.buscarUnaPlayListDeterminadaPorContador(ID_LISTA_SELECCIONADA_EXISTENTE);
 		
 		//------ VALIDACION --------
-		assertEquals(INFORMACION_ESPERADA, informarcionDeLaListaSeleccionada);*/
+		assertEquals(INFORMACION_ESPERADA, informarcionDeLaListaSeleccionada);
 		
-		assertEquals("", informarcionDeLaListaSeleccionada);
+		
 		
 	}
 
